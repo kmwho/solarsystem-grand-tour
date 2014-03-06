@@ -5,7 +5,7 @@
         <!-- compute for how many days, beginning at startTime -->
         <days>365</days>
         <!-- output file, where to save csv files -->
-        <outputDir>/home/elmar/gsoc/auto</outputDir>
+        <outputDir>output/</outputDir>
         <!-- for every x days, add a result to the list of results, i.e.: print a line to the csv file
             this is a double values, so it's also possible to save every second/hour etc.
          -->
@@ -13,7 +13,7 @@
         <!-- step size between t0 and t1 in Seconds
          the default value is 1, i.e.: every second
          -->
-        <leapSize>1</leapSize>
+        <leapSize>500</leapSize>
     </settings>
     <bodies>
         <probe>

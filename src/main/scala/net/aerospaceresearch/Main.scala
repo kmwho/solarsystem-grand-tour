@@ -51,7 +51,6 @@ object Main {
       Days(settings.startTime.value + settings.days),
       settings.recordResultsEvery, settings.leapSize
     )
-
     new SolarSystemsCsvWriter(intermediateSystems.sortBy(_.time.value) , settings.outputDir)
   }
 }

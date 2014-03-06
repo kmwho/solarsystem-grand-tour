@@ -53,8 +53,12 @@ case class SolarSystem(bodies: ParSeq[Body], centerMass: Star, time: Days) {
 
     def iter(systems: List[SolarSystem], cur: SolarSystem, count: Int): List[SolarSystem] =
       if(cur.time >= destinationTime) cur :: systems
-      else if(count == leapsPerOutput) iter(cur :: systems, cur.nextStep(leap), 0)
-      else iter(systems, cur.nextStep(leap), count + 1)
+      else if(count == leapsPerOutput) {
+        iter(cur :: systems, cur.nextStep(leap), 0)
+      }
+      else {
+        iter(systems, cur.nextStep(leap), count + 1)
+      }
 
     iter(Nil, this, 0)
   }
