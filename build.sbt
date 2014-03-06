@@ -21,3 +21,11 @@ resolvers ++= Seq(
 )
 
 assemblySettings
+
+fork := true
+
+javaOptions += "-Dcom.github.fommil.netlib.BLAS=com.github.fommil.netlib.F2jBLAS "
+
+javaOptions += "-Dcom.github.fommil.netlib.LAPACK=com.github.fommil.netlib.F2jLAPACK "
+
+javaOptions += "-Dcom.github.fommil.netlib.ARPACK=com.github.fommil.netlib.F2jARPACK "
